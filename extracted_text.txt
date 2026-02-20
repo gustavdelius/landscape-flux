@@ -1,0 +1,1549 @@
+Research article
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+https://doi.org/10.5194/esd-16-1503-2025
+© Author(s) 2025. This work is distributed under
+the Creative Commons Attribution 4.0 License.
+
+Global stability and tipping point prediction in a
+coral–algae model using landscape–flux theory
+Li Xu1 , Denis D. Patterson2,3 , Simon Asher Levin3,4 , and Jin Wang5
+1 State Key Laboratory of Electroanalytical Chemistry, Changchun Institute of Applied Chemistry,
+
+Chinese Academy of Sciences, Changchun, Jilin, 130022, PR China
+2 Department of Mathematical Sciences, Durham University, Upper Mountjoy Campus,
+
+Stockton Road, Durham DH1 3LE, UK
+3 High Meadows Environmental Institute, Princeton University, Princeton, NJ 08544, USA
+4 Department of Ecology and Evolutionary Biology, Princeton University, Princeton, NJ 08544, USA
+5 Department of Chemistry and of Physics and Astronomy, State University of New York at Stony Brook,
+
+Stony Brook, NY 11794-3400, USA
+Correspondence: Simon Asher Levin (slevin@princeton.edu) and Jin Wang (jin.wang.1@stonybrook.edu)
+Received: 7 January 2025 – Discussion started: 24 January 2025
+Revised: 22 May 2025 – Accepted: 17 June 2025 – Published: 12 September 2025
+
+Abstract. Coral reef ecosystems are remarkable for their biodiversity and ecological significance, exhibiting
+
+the capacity to exist in different stable configurations with possible abrupt shifts between these alternative stable
+states. This study applies landscape–flux theory to analyze how these complex systems behave when subjected
+to random environmental disturbances. We use this theory to formulate and investigate several early warning
+indicators of ecosystem transitions in a well-known coral reef model. We studied a number of specific indicators, including the average flux (the driving force when the system is out of equilibrium), the entropy production
+rate (EPR), the non-equilibrium free energy, and the time irreversibility of the cross-correlation functions. These
+indicators demonstrate a distinctive advantage when compared to classical indicators based on the phenomenon
+of critical slowing down; they exhibit turning points midway between two bifurcations, enabling them to forecast
+transitions in both directions substantially earlier than conventional methods. In contrast, early warning indicators based on the critical slowing down (CSD) phenomenon typically only become apparent when the system
+approaches the actual bifurcation or tipping point(s). Our findings offer improved tools for anticipating critical
+transitions in coral reef and other at-risk ecosystems, with the potential to enhance conservation and management
+strategies.
+
+1
+
+Introduction
+
+These complex systems provide critical ecological functions
+and substantial economic value through coastal protection
+and support of fish and marine biodiversity (Mcmanus and
+Polsenberg, 2004; Hughes et al., 2007; Mccook et al., 2001;
+Dudgeon et al., 2010). However, globally, coral reefs are confronting multiple challenges and experiencing serious threats
+to their abundance, diversity, structural integrity, and ecological functioning (Mumby et al., 2007; Li et al., 2014; Mcmanus et al., 2018; Nes et al., 2016). The degradation of coral
+
+reef ecosystems results from a synergistic combination of anthropogenic pressures (including overfishing and pollution)
+and natural disturbances (such as disease outbreaks, hurricanes, and coral bleaching events). The magnitude of this decline is striking – average hard coral cover in the Caribbean
+Basin has plummeted from approximately 50 % to merely
+10 % over just 3 decades since 1977 (Diko, 2010; Pandolfi
+et al., 2003). While algal proliferation rarely causes direct
+coral mortality, these organisms compete with corals for essential resources such as space and light, contributing to the
+death of established coral colonies. Furthermore, algae im-
+
+Published by Copernicus Publications on behalf of the European Geosciences Union.
+
+1504
+
+pede coral recruitment and regeneration, thereby undermining the capacity of coral populations to recover from environmental stressors (Mumby et al., 2007; Li et al., 2014; Mcmanus et al., 2018; Nes et al., 2016). The most dramatic illustration of such transformation is observed in Caribbean reefs,
+which have undergone a profound shift to an alternative stable state dominated by algal cover (Mumby et al., 2007; Li
+et al., 2014; Mcmanus et al., 2018; Nes et al., 2016). This
+striking ecological transition represents one of the most welldocumented examples of regime shifts in marine ecosystems,
+fundamentally altering both reef structure and function.
+Human land use activities have increased oceanic nutrient
+loading, promoting excessive algal growth in marine ecosystems. Historically, herbivorous fish have played a crucial role
+in regulating algal biomass (Mumby et al., 2007; Li et al.,
+2014). However, widespread overfishing has significantly reduced populations of important herbivores, such as parrotfish. These herbivores primarily consume algae and indirectly benefit coral communities by reducing algal competition. Consequently, conservation strategies aimed at restoring parrotfish populations are considered essential for maintaining resilient coral-dominated reef systems (Mumby et al.,
+2007; Li et al., 2014). The ecological importance of protecting parrotfish for endangered corals is substantial. Under normal conditions, parrotfish communities can maintain approximately 40 % of coral reefs under consistent grazing pressure, whereas overfishing diminishes this capacity to merely
+5 % (Mumby et al., 2007; Li et al., 2014; Mcmanus et al.,
+2018; Nes et al., 2016). Sea urchins, when present in moderate numbers, function as even more effective herbivores
+than parrotfish. This was dramatically demonstrated in 1983
+when mass sea urchin mortality led to a shift from coral
+dominance to algal dominance, leaving only the less efficient parrotfish as grazers. The critical transition dynamics
+between coral and algal states have been extensively investigated by numerous researchers (Mumby et al., 2007; Li
+et al., 2014; Nes et al., 2016; Mcmanus and Polsenberg,
+2004; Hughes et al., 2007; Mccook et al., 2001; Dudgeon
+et al., 2010; Andersen et al., 2009). Research has established
+that coral–algae systems typically exhibit two distinct stable states: coral-dominated conditions and algal-dominated
+conditions (Mumby et al., 2007; Li et al., 2014; Mcmanus
+et al., 2018; Nes et al., 2016). This ecological bistability
+forms the conceptual foundation for our study. While recent
+work has explored more complex models incorporating recruitment seasonality and grazing effects (Mcmanus et al.,
+2018), our analysis focuses specifically on a simplified coral–
+algae interaction model (Mumby et al., 2007; Li et al., 2014)
+to investigate the critical factors determining the reef ecosystem.
+At low grazing intensities, where parrotfish consume
+macroalgae without distinguishing from algal turfs, coastal
+seabeds become covered by macroalgae, resulting in a
+macroalgal-dominant state. Conversely, high grazing intensities promote coral coverage, creating a coral-dominant state.
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+When grazing pressure decreases below a critical threshold, coral populations decline, while macroalgae proliferate,
+causing a shift from coral dominance to macroalgal dominance (Mumby et al., 2007; Li et al., 2014; Mcmanus et al.,
+2018). Within a specific range of grazing intensities, both
+macroalgal-dominant and coral-dominant states represent alternative stable state of the ecosystem (Mcmanus and Polsenberg, 2004; Hughes et al., 2007; Mccook et al., 2001; Dudgeon et al., 2010; Mumby et al., 2007; Li et al., 2014; Mcmanus et al., 2018).
+State changes in complex ecological systems can be
+described through the mathematical frameworks of phase
+transitions or bifurcations. Nonlinear dynamical systems
+can exhibit various behaviors, including steady states, periodic orbits, and chaotic dynamics. Much research has
+predominantly focused on ecological stability at equilibrium points (Mumby et al., 2007; Li et al., 2014; Mcmanus et al., 2018). This approach typically examines the
+basins of attraction of these equilibria across different parameter values, thereby emphasizing local stability properties near equilibrium points (Scheffer et al., 2009). However, conducting global stability analysis of coral–algal systems presents significant challenges, and the relationship between system-wide dynamics and the behavior of individual components remains incompletely understood. In this
+study, we demonstrate how landscape–flux theory, derived
+from non-equilibrium statistical mechanics, provides an effective framework for analyzing the global stability properties of coral–algae ecosystems. We utilize a well-established
+coral–algal model as our primary case study (Mumby et al.,
+2007; Li et al., 2014).
+Understanding how natural systems respond to human disturbances and identifying critical thresholds is essential for
+developing effective early warning systems for ecological
+transitions (Andersen et al., 2009; Bestelmeyer et al., 2013;
+Biggs et al., 2009). As ecosystems face increasing pressure
+from climate change, the ability to detect tipping points and
+anticipate critical transitions has become increasingly important (Lenton, 2011; Scheffer et al., 2015; Thompson and
+Sieber, 2011). Early warning signals (EWSs) play a crucial
+role in this process, helping us to understand when abrupt
+and significant changes might occur in complex ecological
+systems (Clements and Ozgul, 2018a; Contamin and Ellison,
+2009; Drake and Griffen, 2010). Before reaching a critical
+point, ecosystems typically maintain a sustainable balance;
+however, once this threshold is crossed, the current stable
+state loses stability, triggering catastrophic shifts to alternative stable states (Dai et al., 2012, 2013; Scheffer et al.,
+2015).
+Recent theoretical and empirical investigations have substantially advanced our understanding of ecological system
+instabilities (Carstensen et al., 2013; Dakos et al., 2012; Guttal and Jayaprakash, 2009; Kéfi et al., 2014). Critical slowing
+down (CSD) theory has emerged as a framework in this field
+and has been widely applied to predict warning signals from
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+univariate time series data (Dakos et al., 2015; Lindegren
+et al., 2012; Veraart et al., 2012; Scheffer et al., 2001). This
+behavior occurs as a control parameter approaches a critical threshold value, causing system dynamics to decelerate
+while the current steady state becomes increasingly unstable
+(Berglund and Gentz, 2006; Hastings et al., 2018; Scheffer
+et al., 2012). Common indicators include increased variance,
+stronger autocorrelation, and longer return times following
+perturbations (Boettiger and Hastings, 2012; Dakos et al.,
+2012; Gsell et al., 2016).
+Despite its theoretical promise, research has revealed significant limitations to CSD’s practical application. Time delays in ecological systems fundamentally alter the dynamical properties near critical transitions, potentially rendering
+CSD indicators unreliable or misleading (Guttal et al., 2013).
+This theoretical concern is substantiated by empirical evidence from natural systems, where comprehensive analyses
+of long-term data from aquatic ecosystems demonstrate that
+CSD indicators’ efficacy is considerably constrained by realworld complexity, with environmental stochasticity and multiple interacting stressors frequently obscuring warning signals (Gsell et al., 2016).
+While recent advances have expanded CSD applications through refined statistical indicators (Boulton and
+Lenton, 2019; Bury et al., 2021a) and multivariate extensions (Weinans et al., 2019), significant limitations remain.
+Most notably, CSD often provides warnings only when systems are already near-critical thresholds – frequently too late
+for effective intervention (Biggs et al., 2009; Boettiger and
+Hastings, 2013b; Ditlevsen and Johnsen, 2010). Additionally, while CSD performs reliably in one-dimensional systems, it struggles with complex multidimensional ecological
+dynamics involving feedback loops (Boerlijst et al., 2013;
+Hastings and Wysham, 2010; Weinans et al., 2019). These
+shortcomings, along with challenges such as false signal susceptibility (Boettiger et al., 2013b; Perretti and Munch, 2012)
+and extensive data requirements (Burthe et al., 2016), highlight the need for complementary approaches that can provide earlier warnings for complex ecological systems and
+overcome the limitations inherent in current methodologies
+(Boettiger and Hastings, 2013b; Clements and Ozgul, 2018a;
+Dakos et al., 2015).
+There has also been considerable recent interest in early
+warning signals based on AI and machine learning methods
+(Grassia et al., 2021; Bury et al., 2021b). While these methods often show impressive results with simulated and training
+data, it remains to be seen how well they generalize to different physical systems and unseen datasets. Moreover, these
+methods have an inherent disadvantage in that the generated
+EWSs do not have a rigorous mathematical underpinning and
+are typically not as interpretable to practitioners working in
+the application area (George et al., 2023). Machine learning methods have also recently been used to predict critical
+transitions by using existing EWSs (including those based
+on CSD) as features in the models to leverage subject mathttps://doi.org/10.5194/esd-16-1503-2025
+
+1505
+
+ter expertise and insights (Ma et al., 2018; Lassetter et al.,
+2021). This hybrid approach could be a promising direction
+for practical testing of EWSs, including our landscape–fluxbased indicators.
+Early warning signals of critical transitions help us to
+anticipate and understand the likelihood of abrupt and significant changes in complex systems. Ecosystems can usually maintain a sustainable balance before reaching a critical
+point, but, upon crossing the critical point, the current stable
+state can lose stability, triggering a catastrophic transition to
+a new stable state. Near the critical point, the mechanisms
+sustaining the functioning of the ecosystem can break down,
+resulting in a sudden loss of resilience and preventing recovery. It is crucial to detect signals of critical transition as early
+as possible to give enough time to avert a potential ecological
+crisis, and the search for early predictions of imminent structural changes has thus become the focus of intense research.
+Critical slowing down theory is among the most popular and
+well-known approaches, but its predictions are only valid
+near the bifurcation point. In coastal ecosystems specifically,
+the goal is to detect warning signals for transitions from valued states (such as coral-dominated reefs) to degraded states
+(such as macroalgal-dominated reefs) and to assess the likelihood of recovery transitions. Developing indicators that can
+predict both the impending degradation and potential recovery before critical transitions occur would have substantial
+practical significance for ecosystem management (Mumby
+et al., 2007; Li et al., 2014; Veraart et al., 2012; Scheffer
+et al., 2001).
+Ecological systems are increasingly recognized as inherently multivariate complex systems, and the understanding
+of their high-dimensional dynamic behavior requires further
+development (Boettiger and Hastings, 2013a; Boettiger et al.,
+2013a; Nolting and Abbott, 2016; Lamothe et al., 2019;
+Abbott and Dakos, 2021). Conventional one-dimensional
+stochastic models may be missing crucial elements needed to
+describe behaviors generated by rotational curl forces among
+variables originated from high-dimensional systems. Rather
+than using traditional ecological theories based on general
+equilibrium assumptions, we need to characterize ecological systems through non-equilibrium processes. Recent advances in non-equilibrium statistical mechanics offer valuable insights into understanding attractor state formation, stability, bifurcations, and phase transitions in both physical
+and biological systems (Xu et al., 2014b; Wang, 2015; Wang
+et al., 2008; Xu et al., 2012; Wang et al., 2011, 2010; Qian,
+2006; Ge and Qian, 2010; Qian, 2009; Xu et al., 2021, 2023).
+In this study, we propose early warning signals for detecting approaching phase transitions in complex ecological systems. Firstly, we measure the entropy production rate (EPR),
+which quantifies the energy dissipation or “thermodynamic
+cost” required to maintain ecosystem states far from equilibrium. Secondly, we analyze the average flux, which represents the net directional movement or flow of the system
+through its state space, indicating the strength of forces drivEarth Syst. Dynam., 16, 1503–1522, 2025
+
+1506
+
+L. Xu et al.: Global stability and tipping point prediction
+
+Figure 1. (a) The schematic diagram for the coral–algae model.
+
+(b) The phase diagram versus grazing rate g.
+
+ing ecological dynamics. Thirdly, we calculate the difference
+between forward-time and backward-time cross-correlations
+between system variables, which measures time irreversibility – the statistical difference between observing the system’s
+behavior in normal versus reversed time sequences. Together,
+these metrics can detect changes in system dynamics before
+traditional indicators reveal impending critical transitions,
+potentially providing warning signals.
+Our findings demonstrate that these non-equilibrium warning indicators exhibit turning points between bifurcations,
+enabling predictions for both upcoming transitions significantly earlier than traditional critical slowing down indicators, which only become apparent near bifurcation points.
+The potential flux–landscape theory presents effective approaches for exploring the underlying mechanisms of ecological catastrophes and improving the ability to predict critical transitions.
+2
+2.1
+
+Methods
+Coral–algal model
+
+We explore the dynamics of a typical coral–algae ecosystem
+model (Mumby et al., 2007; Li et al., 2014), whose schematic
+diagram is shown in Fig. 1a. The ecosystem model contains
+three functional types: macroalgae (X), coral (Y ), and algal
+turfs (T ) – entities that can be colonized by macroalgae, algal
+turfs, or coral. Algal turf consists of communities of short,
+densely growing filamentous algae that form a “turf-like”
+covering layer on hard substrates in coral reefs, typically
+reaching only a few millimeters in height. Unlike macroalgae, these turfs develop a low, compact structure that creates distinctive microhabitats while serving as a entity in reef
+ecosystem dynamics (Mumby et al., 2007; Li et al., 2014;
+Mcmanus et al., 2018).
+We track the evolution of the proportions of space occupied by each functional type, effectively assuming that the
+system is spatially well mixed, leading to a spatially implicit modeling framework (Mumby et al., 2007; Li et al.,
+2014; Mcmanus et al., 2018). This approach is appropriate
+for intermediate spatial scales where mixing processes (such
+as larval dispersal, water circulation, and mobile herbivore
+grazing) tend to homogenize local variations. The spatially
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+implicit framework allows us to focus on ecosystem-level
+dynamics without the computational complexity of spatially
+resolved models. Corals recruit and overgrow algal turfs at
+rate r, while coral can be overgrown by macroalgae at rate
+a. Natural coral mortality occurs at rate h, and we assume
+that space released by the death of the coral will be rapidly
+recolonized by algal turfs. Macroalgae colonizes algal turfs
+by covering them vegetatively at rate γ . Reef grazers, such
+as parrotfish, are assumed to consume macroalgae and algal
+turfs equally at rate g, and algal turfs arise when macroalgae
+are grazed. Thus, the rate of algal turf production as a function of macroalgae is given by the proportion of grazing that
+affects macroalgae, i.e., gX/(X+T ) (Mumby et al., 2007; Li
+et al., 2014; Mcmanus et al., 2018).
+The coral–algae system can thus be described by the
+following set of nonlinear ordinary differential equations
+(ODEs):
+gX
+dX
+= aXY −
++ γ XT
+dt
+X+T
+dY
+= rT Y − hY − aXY,
+(1)
+dt
+where X represents the proportion of space covered by
+macroalgae and Y represents the proportion of space covered by coral. T represents the proportion of algal turf cover,
+and, since we assume that all space (seabed) is completely
+covered by either macroalgae, coral, or algal turfs, we have
+X + Y + T = 1, or T = 1 − X − Y . g is the grazing rate at
+which parrotfish graze macroalgae without distinction from
+algal turfs, ranging from 0 to 0.8. The parameter interpretations and their default values are given in Table 1.
+Coral reef ecosystems can exhibit up to six distinct stable states: hard corals, turf algae, macroalgae, soft corals,
+coralimorpharians, and urchin barrens (Jouffray et al., 2015;
+Norström et al., 2009). While a more complex model incorporating all six states would better reflect ecological reality, we adopted a simplified two-state approach to facilitate
+analytical tractability while still capturing the fundamental
+bistable dynamics characteristic of critical transitions. This
+simplification enables us to clearly demonstrate the utility of
+our landscape–flux framework while maintaining mathematical accessibility. Additionally, our approach could potentially be extended to higher-dimensional systems with multiple stable states in future research, acknowledging both the
+limitations of our current model and opportunities for further
+development.
+2.2
+2.2.1
+
+Landscape and flux theory for the coral–algae
+model
+The concept of landscape–flux theory
+
+Landscape–flux theory provides a promising alternative
+framework for analyzing complex ecological systems and
+predicting critical transitions. This non-equilibrium statistical mechanics approach offers several distinct advantages
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+1507
+
+Table 1. Parameter interpretation and default values (Mumby et al., 2007; Li et al., 2014).
+
+Symbol
+
+Ecological interpretation
+
+a
+γ
+r
+h
+g
+
+The rate at which corals are overgrown by macroalgae (yr−1 )
+The rate at which macroalgae spread vegetatively over algal turfs (yr−1 )
+The rate at which corals recruit and overgrow algal turfs (yr−1 )
+The natural mortality rate of corals (yr−1 )
+The rate at which herbivores consume macroalgae in the coral–algal model (yr−1 )
+
+over traditional methods. Foremost among these is its capacity to characterize global system stability through the
+construction of potential landscapes that quantify the relative stability of different states (Wang et al., 2008; Xu
+et al., 2014b, 2021). Unlike critical slowing down theory,
+landscape–flux theory effectively captures multidimensional
+system dynamics, including rotational forces (curl flux) as
+an additional driving force besides landscape gradient for
+the dynamics that are often overlooked in equilibrium-based
+analyses (Wang, 2015; Ge and Qian, 2010; Qian, 2006).
+This enables more comprehensive characterization of system
+behavior, particularly in complex ecological networks with
+multiple feedback mechanisms (Xu et al., 2023).
+Another significant advantage is the theory’s ability to detect warning signals substantially earlier than bifurcationproximity indicators (Wang et al., 2011, 2010). By quantifying both the potential landscape topography and the nonequilibrium flux, the approach provides mechanistic insights
+into transition drivers rather than merely phenomenological descriptions (Qian, 2009; Xu et al., 2012). The theory
+has been successfully applied to various complex systems
+(Wang, 2015; Fang et al., 2019), including gene regulatory networks (Wang et al., 2008), cell fate decisions (Wang
+et al., 2010; Xu et al., 2014b), and, more recently, ecological
+regime shifts (Xu et al., 2021, 2023).
+Despite its significant promise and advantages, landscape–
+flux theory presents certain challenges, particularly in its
+practical implementation. Its implementation requires sophisticated mathematical techniques and substantial computational resources (Wang, 2015; Fang et al., 2019). The approach demands comprehensive system knowledge for accurate model formulation and parameter estimation, which can
+be difficult to obtain for many ecological systems (Ge and
+Qian, 2010). Quantifying flux components in empirical systems poses challenges, often requiring high-resolution temporal data (Wang et al., 2011; Qian, 2009). There have not yet
+been any empirical studies combining the landscape flux theory and associated EWSs with data, and it remains to be seen
+how successful the theory will be in practice. Nevertheless,
+the theory’s capacity to provide earlier warnings and deeper
+mechanistic understanding of ecological transitions makes it
+a valuable complement to existing approaches for analyzing
+complex ecosystems facing anthropogenic pressures, and we
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+Default
+value
+0.1
+0.8
+1.0
+0.44
+
+hope that it can be empirically tested in the near future (Xu
+et al., 2021, 2023).
+By adapting the potential landscape–flux framework to
+ecological dynamics, we bridge a critical gap between physical systems, where these methods originated, and complex
+biological systems characterized by nonlinear feedback and
+multiple stable states. Coral reef ecosystems represent an
+ideal test case for this theoretical extension due to documented evidence of alternative stable states, their sensitivity to environmental perturbations, and their growing vulnerability to climate change impacts. Our implementation
+demonstrates how landscape–flux theory can quantify stability of ecological systems under stochastic forcing, providing a mathematically rigorous foundation for early warning
+signals that complement existing early warning indicators
+for ecological systems (Clements and Ozgul, 2018b). This
+contrasts with some recent methods relying on AI and machine learning to produce indicators for transitions based on
+training on empirical data, but without a mathematical underpinning or basis through which to interpret the resulting indicators (George et al., 2023). Our work thus creates
+new opportunities for anticipating critical transitions in reef
+ecosystems, where traditional monitoring approaches often
+detect degradation only after substantial ecological changes
+have occurred. The framework’s ability to characterize global
+stability while accommodating environmental stochasticity
+makes it particularly suited to reef conservation, where identifying resilience thresholds and intervention windows is increasingly urgent for management and preservation efforts.
+2.2.2
+
+Mathematics of landscape and flux theory
+
+The dynamics of the coral–algae model without noise or external fluctuations are characterized by a set of ordinary differential equations. In natural environments, however, coral–
+algae ecosystems are subject to diverse stochastic influences;
+internal stochasticity may emerge from variations in individual growth rates or grazing patterns, while external fluctuations may arise from processes such as ocean acidification, sedimentation, or other climate-change-driven stressors
+(Scheffer et al., 2015; Carstensen et al., 2013). The deterministic model can be expressed in differential notation as
+dx = F (x)dt, where vector x represents the ecosystem state
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1508
+
+L. Xu et al.: Global stability and tipping point prediction
+
+and the driving force F encapsulates the interactions and
+transitions between coral, macroalgae, and algal turfs described in Fig. 1a. To incorporate these various noise sources,
+we extend the model to
+dx = F (x)dt + m · dW ,
+
+(2)
+
+where W , coupled with matrix m, represents an independent
+Gaussian noise process (Gillespie, 1977; Wang, 2015; Swain
+et al., 2002). For analytical convenience, we define DG =
+(1/2)(m · mT ), where D is a constant representing the fluctuation scale and G is the diffusion matrix. Environmental
+disturbances, such as temperature fluctuations, storm events,
+and nutrient pulses, simultaneously affect coral, algae, and
+algal turfs, introducing correlations in the noise structure
+of natural reef systems. While our potential landscape–flux
+framework remains theoretically valid for systems with correlated noise, we have chosen to use a diagonal identity matrix for G to maintain analytical tractability. This simplification allows us to focus on the core dynamics while avoiding the substantial increase in mathematical complexity that
+would result from incorporating non-zero off-diagonal elements to represent correlated noise effects (Wang, 2015). Future extensions of this model could incorporate these more
+realistic noise structures to further refine predictions of reef
+dynamics under stochastic environmental forcing.
+The probability of finding the coral–algae system in state
+x at time t is given by the probability density function
+P (x, t), which evolves according to the Fokker–Planck equation (Van Kampen, 2007; Wang, 2015; Nicolis and Prigogine, 1977):
+∂t P = −∇ · J = −∇ · [F P − (1/2)∇ · ((m · mT )P )],
+
+(3)
+
+where J represents the probability flux through the system.
+The steady-state probability distribution Pss (x) can be obtained by solving
+0 = −∇ · J (x)
+= −∇ · [F (x)Pss (x) − (1/2)∇ · ((m · mT )Pss (x))].
+
+(4)
+
+For equilibrium systems, we identify a “detailed balance
+solution” in which the flux J vanishes completely, signifying the absence of net energy transfer into or out of the
+system (detailed discussion in Appendix A). In this case,
+Pss ∼ exp[−U ] (Gillespie, 1977; Van Kampen, 2007; Wang,
+2015; Nicolis and Prigogine, 1977), where U represents the
+population-potential landscape. The driving force F can then
+be decomposed as
+F = −DG · ∇U + D∇ · G.
+
+(5)
+
+Thus, in equilibrium systems, F is determined entirely by
+the gradient of the potential landscape. We can calculate Pss
+by solving the equation or through experimental data collection and subsequently derive the potential landscape using
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+U = − ln Pss (Wang et al., 2008; Wang, 2015; Van Kampen,
+2007).
+For non-equilibrium systems, which better represent ecological reality (Hastings and Wysham, 2010; Weinans et al.,
+2019), the force decomposition becomes
+F = −DG · ∇U + D∇ · G + J ss /Pss ,
+
+(6)
+
+where J ss denotes the non-zero steady-state probability flux,
+calculated as J ss = F Pss − D∇ · (GPss ). This flux satisfies
+∇ · J ss = 0, indicating that J ss /Pss represents a purely rotational force component. The potential gradient −DG · ∇U
+drives the system toward stable states, while the divergencefree flux component generates rotational flow that facilitates
+transitions between alternative stable states (Wang et al.,
+2011; Xu et al., 2012). In non-equilibrium systems such as
+coral reefs, both the potential landscape U and flux J ss contribute to the system dynamics. Despite being conceptually
+derived from equilibrium theory, the potential landscape provides valuable insights into the global stability properties of
+non-equilibrium ecological systems (Xu et al., 2021, 2023),
+as we demonstrate for the coral–algae model.
+2.2.3
+
+Entropy production rate (EPR) and the average
+flux (Fluxav )
+
+In non-equilibrium systems, the non-zero curl flux J ss breaks
+detailed balance and provides a quantitative measurement of
+the system’s deviation from equilibrium (Xu et al., 2014b;
+Wang et al., 2008; Wang, 2015; Wang et al., 2011, 2010;
+Qian, 2006). This deviation metric is particularly valuable
+for investigating instabilities in the current state and detecting transitions to new stable states, making flux a critical component in developing early warning indicators for
+non-equilibrium ecological systems (Xu et al., 2021; Dakos
+et al., 2015). Fundamentally, flux provides a framework for
+analyzing non-equilibrium thermodynamics through entropy
+production. For the stochastic coral–algae Rmodel, the system entropy can be defined as Sentropy = − P ln P dx. The
+temporal evolution of this entropy can be decomposed into
+two components: Ṡentropy = ṠEPR −Ṡe , where ṠEPR represents
+the entropy production rate (EPR) and Ṡe denotes the heat
+dissipation rate or environmental entropy change. The entropy production
+rate is mathematically expressed as EPR =
+R
+ṠEP R = dx(J · (DG)−1 · J )/P (Qian, 2006; Wang et al.,
+2008; Zhang et al., 2012; Ge andRQian, 2010), while the heat
+dissipation rate is given by Ṡe = dx(F − D∇ · G) · J .
+The EPR is directly proportional to flux J , with larger
+flux values generating higher EPR values and consequently
+greater deviations from equilibrium (Ge and Qian, 2010;
+Qian, 2006). At steady state, a fundamental relationship
+emerges: the entropy production rate equals the heat dissipation rate (Ge and Qian, 2010; Qian, 2006; Wang et al., 2008;
+Zhang et al., 2012). In our analysis of the stochastic coral–
+algae model, we utilize both the EPR and the average flux
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+R
+magnitude, defined as Fluxav = |J |dx, to quantify the degree of non-equilibrium behavior and generate early warning
+signals for critical transitions (Wang et al., 2011; Xu et al.,
+2023).
+
+1509
+
+the MFPT from the coral-dominated state to the macroalgaedominated state and, conversely, τMC as the MFPT from the
+macroalgae-dominated state to the coral-dominated state.
+2.2.6
+
+2.2.4
+
+Time irreversibility: the average difference
+between forward and backward cross-correlation
+
+Time irreversibility in dynamical trajectories provides an
+effective method for quantifying non-equilibrium behavior in complex systems. We analyzed long-time trajectories of coral (X) and macroalgal (Y ) cover simulated from
+the Langevin equation, focusing on noise-induced transitions between the macroalgae and coral attractors. The crosscorrelation function forward in time is defined as CXY (τ ) =
+hX(0)Y (τ )i, where X and Y represent time trajectories with
+interval τ (Qian and Elson, 2004; Zhang and Wang, 2018).
+Correspondingly, C̃XY (τ ) represents the cross-correlation
+function backward in time. The average difference between
+forward
+q R and backward cross-correlation, defined as 1CC =
+1 tf
+2
+tf 0 (CXY (τ ) − C̃XY (τ )) dτ , effectively quantifies time
+irreversibility. This measure captures the degree of nonequilibrium and flux strength through the system’s deviation from detailed balance (Qian and Elson, 2004; Zhang and
+Wang, 2018; Xu and Wang, 2020), offering a practical indicator of phase transitions directly observable from temporal
+trajectories.
+2.2.5
+
+Escape time (the mean first passage time)
+
+Ecological systems may transition from their current stable
+state to an alternative stable state due to stochastic fluctuations or external forces, effectively escaping their basin of
+attraction. The escape time between stable states provides a
+valuable quantitative measure for assessing global stability
+in coral reef ecosystems. By estimating the mean exit time
+from a basin of attraction (Arani et al., 2021; Wang et al.,
+2008; Xu et al., 2021, 2014a), we can better understand the
+likelihood of transitions between coral-dominated and algaedominated states. Mean first passage time (MFPT), the average time required for a stochastic process to first reach a
+specified threshold value, provides a robust metric for quantifying this phenomenon. MFPT effectively measures the kinetic speed or temporal characteristics of transitioning between states, offering natural indicators of a system’s propensity to depart from its current basin of attraction.
+To investigate this behavior, we employ Langevin dynamics to simulate the stochastic coral–algae model and analyze
+the MFPT distribution between stable states. Our methodology begins with us selecting one stable state as the initial
+condition, while designating a disk with radius r0 = 0.01 surrounding the alternative stable state as the target “state”. We
+then compile first passage time statistics from the initial to
+the final state, subsequently averaging across all simulations
+to determine the mean first passage time. We define τCM as
+https://doi.org/10.5194/esd-16-1503-2025
+
+Lyapunov function for the coral–algae model
+under zero fluctuations
+
+In dynamical systems theory, Lyapunov functions serve as
+powerful tools for stability analysis, enabling characterization of an attractor’s global stability beyond the limitations
+of local stability analysis (Wang, 2015; Fang et al., 2019).
+We discussed the differences between global stability and
+local stability detailed in the Supplement. While no general method exists for constructing Lyapunov functions for
+complex nonlinear systems, we can utilize the steady-state
+probability distribution Pss and the population potential U
+to investigate the global stability properties of the stochastic
+coral–algae model under finite fluctuations. Unfortunately,
+the population-potential landscape U does not generally
+function as a Lyapunov function (Xu et al., 2014a; Zhang
+et al., 2012); in the small noise limit (D → 0+ ), the intrinsicpotential landscape φ0 emerges as a viable Lyapunov function. We can compute φ0 by solving the Hamilton–Jacobi
+equation:
+H = F · ∇φ0 + ∇φ0 · G · ∇φ0 = 0.
+
+(7)
+
+This equation results from expanding the populationpotential U in powers of noise level D, substituting this series into the Fokker–Planck equation, and truncating at order
+D −1 to obtain the equation for φ0 (Wang, 2015; Xu et al.,
+2014a; Zhang et al., 2012).
+To verify that φ0 functions as a Lyapunov function, we
+calculate
+d
+φ0 (x) = ẋ · ∇φ0 = F · ∇φ0 = −∇φ0 · G · ∇φ0 ≤ 0,
+dt
+
+(8)
+
+where the inequality holds when G is positive definite. This
+demonstrates that φ0 (x) monotonically decreases along deterministic trajectories as D → 0, confirming its utility for
+quantifying global stability in the small noise regime. The
+intrinsic-potential landscape φ0 relates to the steady-state
+probability and population-potential landscape through U =
+− ln Pss ∼ φ0 /D as D → 0.
+In the zero-fluctuation limit, the driving force F can be
+decomposed into gradient and curl components:
+F = −G · ∇φ0 + (J ss /Pss )|D→0 =: −G · ∇φ0 + V .
+The first term, −G · ∇φ0 , represents the gradient of the nonequilibrium intrinsic potential, while V = (J ss /Pss )D→0 defines the intrinsic steady-state flux velocity. The steadystate intrinsic flux term J ss |D→0 is divergence-free due
+to ∇ · J = 0. From the Hamilton–Jacobi equation, we derive (J ss /Pss )|D→0 ·∇φ0 = V ·∇φ0 = 0, establishing that the
+intrinsic-potential gradient is perpendicular to the intrinsic
+flux in the zero-fluctuation limit (Wang et al., 2011, 2010).
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1510
+
+For the coral–algae model, calculating the intrinsic potential φ0 presents substantial difficulties due to the constrained
+state space (an isosceles triangle where 0 ≤ X, Y ≤ 1, 0 ≤
+1−X −Y ≤ 1). The intrinsic potential is challenging to compute from the Hamilton–Jacobi equation in a normalized triangular state space. These geometric constraints complicate
+the analytical solution of the Hamilton–Jacobi equation, requiring specialized mathematical approaches to capture the
+system’s dynamical properties within this bounded domain.
+We therefore expand the potential U (x) in the small diffusion
+limit as U (x) = φ0 (x)/D +φ1 (x)+O(D 2 ) and employ a linear fitting method to approximate φ0 . By plotting diffusion
+coefficients D versus D U (specifically D ln Pss ) using small
+D values, we determine φ0 from the slope of the resulting
+line (Zhang et al., 2012; Xu et al., 2021, 2023).
+Additional analyses presented in the Supplement include
+non-equilibrium thermodynamics, entropy dynamics, energy
+and free energy characteristics under both zero-fluctuation
+and finite-fluctuation conditions, and kinetic pathways between alternative stable states (macroalgae and coral) in the
+model system. We add a glossary of terms in Table S1 in the
+Supplement.
+
+3
+
+Results
+
+Applying the landscape–flux framework described above, we
+now examine the dynamics and stability properties of the
+coral–algal ecosystem model under both finite- and zerofluctuation conditions. Throughout our analysis, we distinguish between two alternative stable states: the “macroalgae”
+state, characterized by macroalgal dominance and low coral
+density or by macroalgal only, and the “coral” state, defined
+by coral dominance and minimal macroalgal presence or by
+coral only (Mumby et al., 2007; Scheffer et al., 2015). This
+bimodal pattern of community structure represents a classic
+example of alternative stable states in marine ecosystems,
+with critical implications for reef resilience and conservation
+(Hastings et al., 2018; Scheffer et al., 2001). By quantifying
+the potential landscape and probability flux patterns associated with these states, we aim to characterize global stability
+properties and develop early warning indicators for critical
+transitions between these alternative ecosystem.
+In the model, parameter g represents the grazing rate of
+macroalgae by herbivorous fish and invertebrates, a crucial ecological process with well-documented real-world
+counterparts. This parameter directly connects mathematical
+modeling to measurable ecological dynamics that reef managers can monitor and potentially influence. Real-world factors affecting the grazing rate g include overfishing of herbivores (decreasing g); establishment of marine protected
+areas (increasing g); disease outbreaks among key grazers,
+such as the 1983 Caribbean sea urchin die-off (reducing g);
+and predator–prey dynamics through trophic cascades. As g
+gradually decreases in natural systems, algae gain competEarth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+itive advantage over corals, system resilience weakens, recovery becomes increasingly difficult after disturbances, and,
+eventually, at the critical threshold, even minor herbivore
+loss can trigger a shift to algal dominance. This mechanism
+explains ecological transitions observed on reefs, where reduced herbivory caused coral-to-algae phase shifts matching
+our bifurcation analysis predictions.
+Figure 1b illustrates the deterministic phase diagram of
+the coral–algae system as a function of the parrotfish grazing rate g (which acts on macroalgae without distinguishing from algal turfs). When 0 ≤ g < 0.1796, the system exhibits one unstable fixed point (the dashed coral state) and
+one stable fixed point (the solid macroalgae state), indicating macroalgal dominance. As grazing intensity increases
+to 0.1796 ≤ g < 0.3927, the system transitions to bistability,
+characterized by two stable fixed points – the solid macroalgae state and the solid coral state – separated by an unstable green saddle fixed point that serves as a threshold between the two stable regimes. This bistable configuration
+persists until g = 0.3927, beyond which (g > 0.39) only the
+coral-dominated fixed point remains stable, indicating a complete shift to coral dominance at higher grazing intensities.
+The diagram which denotes the noise-induced transitions
+with parameter-driven ones reveals a bistable region wherein
+two alternative stable states – macroalgae and coral – coexist across a specific range of grazing values. This bistable
+region is bounded by transcritical bifurcations, which occur precisely when one equilibrium solution enters or exits
+the ecologically feasible region of phase space (defined by
+0 ≤ X + Y + T ≤ 1, 0 ≤ X, Y, T ≤ 1).
+To characterize the global stability properties of this system, we solved the Fokker–Planck equation for the coral–
+algae model, yielding the steady-state probability distribution Pss and consequently the population landscape via U =
+− ln Pss . Figure 2a presents three-dimensional visualizations
+of these population-potential landscapes under finite fluctuations (D = 0.0005). These landscapes reveal how system stability evolves with changing grazing pressure. At low
+grazing rates (0 ≤ g < 0.1796), the landscape exhibits a single stable state dominated by macroalgae (the macroalgae
+state). As grazing intensity increases (0.1796 ≤ g < 0.3927),
+a bistable landscape emerges with local minima corresponding to both macroalgal and coral dominance. With further
+increases in grazing rate, the coral state deepens, while the
+macroalgae state becomes increasingly shallow and eventually disappears (g > 0.39), as also conceptualized in Fig. 1b.
+At sufficiently high grazing rates, macroalgae are effectively
+eliminated from the system, and the landscape exhibits a single deep basin corresponding to coral dominance. This progression of landscape topographies provides a comprehensive visualization of how grazing pressure drives transitions
+between alternative community states in coral–algae ecosystems (Scheffer et al., 2012; Hastings et al., 2018).
+Natural ecosystems invariably experience disturbances
+and stochastic fluctuations. In systems characterized by alterhttps://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+1511
+
+Figure 2. (a) The population-potential landscape U for the coral–algae model with finite fluctuation D = 5 × 104 . (b) The population-
+
+potential landscape U projected on X.
+
+native stable states, sufficiently intense fluctuations can propel the system from one stability basin through an unstable
+threshold, resulting in transition to an alternative stable configuration. Figure 2b illustrates this dynamic process through
+the classical “ball-in-the-valley” conceptual model (Scheffer
+et al., 1993; Scheffer, 2009), which visually represents the
+population-potential landscape U projected onto coral cover
+(X) under different grazing intensity (g). This potential landscape is quantitatively derived from the steady-state probability distribution of the stochastic coral–algal model.
+In this visualization, the ecosystem state is represented by
+a ball that naturally moves downhill and stabilizes in potential basins (valleys) that vary with grazing intensity. Each valley corresponds to an attraction basin in dynamical systems
+theory (Nolting and Abbott, 2016; Lamothe et al., 2019; Abbott and Dakos, 2021). Under small fluctuations, the system
+may temporarily deviate from equilibrium (the ball climbs
+partway up the slope) before returning to its steady state at
+the basin minimum. However, sufficiently large fluctuations
+can drive the system across the ridge (passing an unstable
+saddle point) into an alternative stability basin.
+The landscape topography undergoes systematic transformations as grazing intensity increases: at g = 0.125, only
+the macroalgal valley (M) exists; at g = 0.275, both valleys exist, but the coral valley (C) remains shallower than
+the macroalgal valley; at g = 0.3, both valleys attain similar depths, indicating comparable stability; at g = 0.325, the
+coral valley becomes deeper than the macroalgal valley; and,
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+finally, at g = 0.75, only the coral valley remains. This progression captures the grazing-mediated shift from macroalgal
+to coral dominance in reef ecosystems.
+Figure 3a–c demonstrates that the intrinsic-potential landscapes calculated for the coral–algae model exhibit qualitatively similar patterns to the corresponding populationpotential landscapes across the grazing gradient, further validating the stability analysis approach. Figure 3d illustrates
+the intrinsic flux (purple arrows) and the negative gradient
+of the intrinsic-potential landscape (white arrows) at grazing
+rate g = 0.29, clearly depicting their directional relationships
+in the vicinity of steady states. A striking feature of these vector fields is their orthogonality: the intrinsic fluxes are perpendicular to the negative gradients of the intrinsic-potential
+landscape −∇φ0 . This perpendicularity emerges from the
+mathematical relationship (J ss /Pss )|D→0 · ∇φ0 = V · ∇φ0 =
+0, which is derived from the Hamilton–Jacobi equation under
+the zero-fluctuation limit.
+Figure 3e and f display the flux (purple arrows) and negative gradient of the population-potential landscape (white
+arrows) superimposed on the landscape for different fluctuation intensities: D = 0.0005 (e) and D = 0.005 (f). The circulating fluxes around the stable states enhance communication between the macroalgae and coral states. These visualizations effectively demonstrate how the driving forces of
+the coral–algal system can be decomposed into complementary components: F = −D · ∇U + J ss /Pss + D∇ · G for finite fluctuations and F = −G·∇φ0 +(J ss /Pss )|D→0 = −G·
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1512
+
+L. Xu et al.: Global stability and tipping point prediction
+
+Figure 3. (a–c) The intrinsic-potential landscape with different g for the coral–algae model. (d–f) The dominant intrinsic paths and fluxes
+
+on the intrinsic-potential landscape φ0 with a zero-fluctuation limit and a grazing rate of g = 0.29 (d). The dominant population paths and
+fluxes on the population-potential landscape U with the diffusion coefficients D = 0.0005 (e) and D = 0.005 (f). The red lines represent
+the dominant paths from the macroalgae state to the coral state. The black lines represent the dominant paths from the coral state to the
+macroalgae state. The white arrows represent the steady-state probability fluxes. (g) The population barrier heights versus parameter g. (h)
+The intrinsic barrier heights versus parameter g. (i) The population barrier heights versus the mean first passage time. The population barrier
+height 1USC = US − UC and intrinsic barrier heights 1φ0SC = φ0S − φ0C , 1USM = US − UM , 1φ0SM = φ0S − φ0M , and τCM represent
+the mean first passage time from state coral to state macroalgae, and τMC represents the mean first passage time from state macroalgae to
+state coral. (j) The logarithm of MFPT versus g. (k) The frequency of the flickering f ω versus grazing rate g.
+
+∇φ0 +V for the zero-fluctuation limit. The substantial difference in magnitude of color bar units reflects the fundamentally different metrics being visualized: Fig. 3d represents
+the intrinsic-potential landscape derived from the Hamilton–
+Jacobi equation with zero limit fluctuations, whereas Fig. 3e
+and f show the population-potential landscape from the
+Fokker–Planck equation with finite fluctuations. These inherent mathematical differences naturally produce different
+numerical ranges.
+Figure 3d, e, and f further reveal the dominant transition pathways between alternative stable states. Red lines
+represent the dominant paths from the macroalgae state to
+the coral state, while black lines indicate dominant paths in
+the reverse direction, shown on both the intrinsic-potential
+landscape φ0 under zero fluctuations (d) and the populationpotential landscape U under finite fluctuations (e and f). The
+purple arrow fluxes in Fig. 3d guide these dominant paths
+under zero fluctuations, causing them to deviate from the
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+steepest descent paths and diverge from each other as they
+pass through the saddle point – a deviation from equilibrium
+systems where zero flux would result in convergent paths.
+Similarly, under finite fluctuations (Fig. 3e, f), the dominant
+population paths guided by the purple arrow fluxes also deviate from steepest descent trajectories. This analysis reveals
+a fundamental feature of non-equilibrium systems: path irreversibility. The dominant paths from macroalgae to coral
+differ significantly from those in the reverse direction. This
+irreversibility stems from the non-equilibrium rotational flux,
+which creates spiral-shaped currents around stability basins.
+Interestingly, the dominant paths under zero-fluctuation limit
+appear closer to each other compared to those under finite
+fluctuations, though they remain distinct due to the non-zero
+intrinsic flux. These spiral flux patterns represent the dynamical signature of non-equilibrium behavior in the coral–algal
+ecosystem (Wang et al., 2011; Xu et al., 2012; Zhang et al.,
+2012).
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+Figure 3g and h illustrate how barrier heights in both
+population-potential and intrinsic-potential landscapes vary
+with grazing rate g. As g increases, the coral–algal system transitions from macroalgae state dominance to coral
+state dominance. This transition is reflected in the changing
+barrier heights: population barrier height 1USC = US − UC
+and intrinsic barrier height 1φ0SC = φ0S −φ0C increase with
+higher grazing rates, while 1USM = US −UM and 1φ0SM =
+φ0S −φ0M decrease. Here, US and φ0S represent the potential
+values at the saddle point between alternative states, while
+UM , φ0M , UC , and φ0C denote the minimum potential values in the macroalgae and coral states, respectively. These
+patterns demonstrate that elevated parrotfish grazing progressively destabilizes the macroalgae state while enhancing the
+stability of the coral state. The deeper attraction basin with
+higher barrier heights creates greater resistance to state transitions. Notably, both population and intrinsic barrier heights
+display nearly identical trends as g increases.
+Figure 3j presents the mean first passage time (MFPT),
+which quantifies the average time required for a stochastic
+process to first reach a specified state. The behavior of the
+mean first passage time (MFPT), as it is represented in logarithmic form, specifically shows an increase in ln τCM and
+a decrease in ln τMC as the parameter g increases. This trend
+indicates that it takes more time to exit the coral state, while
+it requires less time to transition out of the macroalgae state
+as g rises. Consequently, the MFPT can effectively characterize the transition from the macroalgae state to the coral
+state with increasing g, providing a measurable indicator of
+this critical transition.
+Figure 3i illustrates that the logarithmic MFPT plotted
+against population barrier heights reveals a positive correlation: both ln τCM and ln τMC increase with barrier height,
+approximating a relationship of τ ∼ exp(1U ). This exponential relationship indicates that escape time dramatically
+lengthens as barrier height increases, directly linking transition kinetics to landscape topography. Specifically, a higher
+barrier height or deeper valley results in a longer time required to escape from that valley. This correlation suggests
+that the population-potential landscape topography is closely
+related to the kinetic speed of state switching, thereby influencing the communication capability for the global stability
+of the system.
+The flickering frequency quantifies the number of state
+transitions per unit time. Specifically, fωCM represents the
+frequency of transitions from the coral state to the macroalgae state per unit time. In Fig. 3k, we illustrate the frequency of transitions from macroalgae to coral (fωMC ) with
+fluctuation strength D = 5 × 10−4 . Our results demonstrate
+that fωMC increases dramatically as g increases. This phenomenon can be explained by the decreasing stability of the
+macroalgae state’s basin of attraction, which becomes shallower as g increases. Consequently, the system exhibits a
+higher probability of transitioning to the coral state. Previous
+research has established flickering frequency as an effective
+https://doi.org/10.5194/esd-16-1503-2025
+
+1513
+
+early warning signal for critical transitions (Scheffer et al.,
+2012, 2009). The tipping points identified through flickering
+frequency occur near the bifurcation point in the coral–algae
+model, where the macroalgae state becomes unstable (flat potential), while the coral state becomes dominant. Flickering
+frequency indicates that the macroalgae state loses resilience,
+characterized by a diminishing basin of attraction in the potential landscape, while the coral state gains dominance. It is
+important to note that actual transitions may occur considerably earlier than this bifurcation point due to larger environmental fluctuations.
+While the effectiveness of critical slowing down as an
+early warning indicator is under low-noise conditions, a critical question remains regarding its robustness under more
+realistic, higher-noise scenarios. This consideration is particularly important given that traditional critical slowing
+down indicators are known to perform poorly with increased
+stochastic fluctuations (Hastings and Wysham, 2010). We
+conducted analyses systematically varying the noise magnitude from D = 1 × 10−5 to D = 1 × 10−2 (Fig. 4a–j). Figure 4 demonstrates how the population entropy production
+rate (EPR; a–e) and average flux (Fluxav ; f–j) vary with
+grazing rate under increasing finite fluctuations. Our findings reveal that both EPR and average flux (Fluxav ) maintain relatively robust performance as early warning signals
+up to D = 1 × 10−2 , beyond which signal reliability begins
+to deteriorate significantly. This represents a substantial improvement over conventional critical slowing down indicators, which typically lose effectiveness at high noise levels.
+The relative noise robustness of our framework likely stems
+from the fact that our indicators directly quantify systemwide properties reflecting global stability, rather than local
+temporal patterns that become increasingly masked by higher
+noise.
+Figure 4k displays the intrinsic entropy production rate
+inEPR and intrinsic average flux inFluxav against g. These
+two metrics exhibit a similar pattern, initially increasing and
+subsequently decreasing with higher grazing rates, with pronounced peaks occurring between the two transcritical bifurcations shown in Fig. 4k. These peaks coincide with the
+critical transition region from macroalgae to coral dominance. Additionally, Fig. 4k reveals that intrinsic free energy
+reaches a minimum near the peaks of inEPR and inFluxav .
+Collectively, these findings suggest that EPR, Fluxav , inEPR,
+inFluxav , and intrinsic free energy can serve as effective indicators for detecting phase transitions and bifurcations in
+coral–algal systems (Xu et al., 2021, 2023).
+To calculate state-specific time irreversibility measures,
+we employed relatively small diffusion coefficients to prevent spontaneous transitions between alternative stable
+states. This approach allowed us to collect sufficient stochastic simulation data while the system remained within either the macroalgae or coral state. We denote the resulting
+irreversibility measures as 1CCM (for trajectories within
+the macroalgae state) and 1CCC (for trajectories within the
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1514
+
+L. Xu et al.: Global stability and tipping point prediction
+
+Figure 4. The population entropy production rate (a–e) and the population average flux (f–j) versus grazing rate g with increasing D. (k) The
+
+intrinsic entropy production rate, the population average flux, and the free energy versus grazing rate g for the coral–algae model (parameters
+are set in Table 1). (l–m) The EPR and Fluxav versus grazing rate g with different natural mortality rate of corals h for the coral–algal model.
+The dashed lines represent the locations of the transcritical points for each value of h, with the same colors for the EPR lines.
+
+coral state). Notably, once a system transitions to an alternative state, the pre-transition irreversibility measure can no
+longer predict the transition that has already occurred.
+Figure 5a illustrates how both 1CCM and 1CCC exhibit
+pronounced peaks between the two transcritical bifurcations
+under small fluctuations (D = 1 × 10−5 ) with the parameter
+h = 0.44. Figure 5b displays the derivatives of these measures: k1CCM (the slope of 1CCM) for the macroalgae state
+and k1CCC (the slope of 1CCC) for the coral state. We fitted
+an exponential function to the simulation data to calculate
+these derivatives. The derivative measures exhibit clear inflection points, indicating significant changes as the system
+approaches bifurcation points. These characteristic patterns
+in irreversibility measures and their derivatives demonstrate
+their potential as early warning signals for critical transitions
+in coral–algae ecosystems.
+Figure 5c illustrates the relationship between variance and
+grazing rate g. Specifically, as the grazing rate g increases,
+the variance in the macroalgae state (VarM ) shows a clear increasing pattern, while, simultaneously, the variance in the
+coral state (VarC ) exhibits a decreasing trend. This divergent behavior in variances provides important insights into
+the system’s stability characteristics. The increasing variance
+in the macroalgae state (VarM ) indicates growing instability
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+and fluctuations in this state as grazing pressure intensifies.
+Conversely, the decreasing variance in the coral state (VarC )
+signifies that this state becomes more stable and resilient with
+increasing grazing pressure. These variance patterns serve as
+quantitative early warning indicators of the shifting stability landscape in the coral–algae system and help identify the
+approach toward critical transition points in this ecological
+model.
+Critical slowing down emerges as ecosystems approach
+bifurcation points during gradual environmental changes.
+When a system within a stable state experiences external
+disturbance, it eventually returns to its original equilibrium
+after a characteristic period known as the relaxation time
+(Scheffer et al., 2009). This relaxation time represents the
+system’s adaptive response to environmental perturbations.
+When the varying grazing rate g, bifurcations can be approached from either increasing or decreasing directions.
+Critical slowing down effectively identifies the left bifurcation (where macroalgae becomes dominant and the coral
+state flattens) when g decreases and identifies the right bifurcation (where coral becomes dominant and the macroalgae
+state flattens) when g increases. Figure 5d illustrates this phenomenon in the coral–algal model: the relaxation time τrelaxM
+for the macroalgae state increases sharply when approachhttps://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+1515
+
+Figure 5. (a) The average difference in the cross-correlations forward and backward in time: 1CCM and 1CCC versus g. (b) k1CCM (the
+
+slope of 1CCM) and k1CCC (the slope of 1CCC) versus g. (c) The variance VarM and VarC versus grazing rate g. (d) The relaxation
+time τrelaxM and τrelaxC versus grazing rate g. (e) kCSDM (the slope of the relaxation time τrelaxM ) and kCSDC (the slope of the relaxation
+time τrelaxC ) versus grazing rate g. (f) The two-dimensional phase diagram of the natural mortality rate of corals h versus grazing rate g
+for the coral–algal model. 1CCMmax represents the maximum of 1CCM, and 1CCCmax represents the maximum of 1CCC. τrelaxMmax
+represents the coordinate position of the sharp rise in τrelaxM , and τrelaxCmax represents the coordinate position of the sharp rise in τrelaxC .
+(D = 1.0 × 10−5 , h = 0.44)
+
+ing the right transcritical bifurcation point with increasing g,
+while the relaxation time τrelaxC for the coral state similarly
+increases when approaching the left transcritical bifurcation
+with decreasing g.
+Figure 5e displays the derivatives of these relaxation times,
+kCSDM (slope of τrelaxM ) and kCSDC (slope of τrelaxC ), plotted
+against grazing rate g. These slopes, particularly k1CCC and
+kk1CCC , exhibit sharp increases as the system approaches bifurcation points, confirming that relaxation time lengthens
+near critical transitions. However, the analysis reveals a crucial advantage of non-equilibrium warning indicators (flux,
+entropy production rate, time irreversibility) over traditional
+critical slowing down indicators: they provide substantially
+earlier predictions of impending bifurcations. For instance,
+Fig. 5a shows that peaks in time irreversibility measures
+(1CCC and 1CCM) occur within the bistable zone, whereas
+peaks in relaxation times (Fig. 5d) appear only at the immediate vicinity of bifurcation points.
+The non-equilibrium measures (flux magnitude, entropy
+production rate, intrinsic free energy, and time irreversibility) collectively provide early warning signals that precede
+predictions from conventional methods. In the coral–algae
+model, these non-equilibrium indicators predict the transition from macroalgae dominance to coral dominance midway through the bistable region, rather than near the critical
+threshold at g = 0.3927 where the coral state becomes dominant. This represents a significantly earlier warning than in
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+previously reported approaches (Veraart et al., 2012; Scheffer et al., 2001, 2012).
+Our non-equilibrium warning indicators (flux, entropy
+generation rate, time irreversibility from cross-correlation
+analysis, and non-equilibrium free energy) consistently exhibit critical transitions between the two transcritical bifurcations in the coral–algal model. These indicators provide
+substantially earlier warnings compared to traditional critical slowing down signals. From the perspective of a system
+currently in the macroalgae state, our non-equilibrium signals anticipate the right bifurcation (where macroalgae becomes unstable, while coral becomes dominant) well before
+critical slowing down indicators detect this transition. Similarly, from the perspective of a system in the coral state, our
+indicators predict the left bifurcation (where coral becomes
+unstable, while macroalgae becomes dominant) earlier than
+critical slowing down. This positioning of non-equilibrium
+indicator turning points in the middle of the bistable region
+enables prediction of both bifurcations with considerable advance warning.
+Critical slowing down indicators suffer from a fundamental limitation: they invariably miss one bifurcation in each
+parameter direction. For instance, as grazing rate g increases
+toward the right bifurcation, critical slowing down fails to
+detect the left transcritical bifurcation, where the macroalgae state dominates and the coral state first appears as a
+shallow attractor. This occurs because critical slowing down
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1516
+
+only manifests when the landscape around the current attractor flattens near a bifurcation point. When approaching the
+right bifurcation, the system’s current macroalgae state becomes flat, producing critical slowing down. However, near
+the left bifurcation with increasing g, the macroalgae state remains dominant with a non-flat landscape, preventing critical
+slowing down from emerging. Consequently, critical slowing
+down cannot predict left bifurcations when in a macroalgaedominated state with increasing g or right bifurcations when
+in a coral-dominated state with decreasing g.
+Figure 4l and m display entropy production rate (EPR) and
+average flux (Fluxav ) plotted against grazing rate g across
+different coral natural mortality rates h. Every data curve exhibits a pronounced peak within its corresponding bistable
+region, confirming that both EPR and Fluxav effectively indicate phase transitions in coral–algal systems. Our nonequilibrium early warning signals emerge midway between
+bifurcations, providing much earlier predictions in both parameter directions compared to critical slowing down indicators that appear only near specific bifurcations. This bidirectional predictive capacity represents a significant advantage
+of our approach, as illustrated in Fig. 4.
+Critical slowing down has been widely used in models
+with saddle-node bifurcations. In our case, because the stable solutions leave the feasible region exactly at the point at
+which transcritical bifurcations occur, we effectively have the
+same qualitative dynamics that occur in models with saddlenode bifurcations. In particular, there is one stable and one
+unstable solution approaching the bifurcation, and both solutions disappear after the bifurcation occurs. So far, most studies have been focused on effective one-dimensional methods, the results of which can often be applied to effective
+equilibrium systems where global stability can be quantified by landscape alone, without considering the key nonequilibrium in-gradient component, i.e., flux (Veraart et al.,
+2012; Scheffer et al., 2001, 2012, 2009). Our fully vectorized high-dimensional formulation of the potential flux and
+landscape can quantify the non-equilibrium by the non-zero
+curl flux, which can lead to much richer complex dynamics
+with detailed balance breaking. In contrast, the equilibrium
+dynamics are determined entirely by the gradient of the potential landscape. Curl fluxes that break the detailed equilibrium play an important role in driving the dynamics of the
+non-equilibrium system.
+Figure 5f presents a two-parameter phase diagram illustrating the relationship between coral natural mortality rate h
+and grazing rate g. Parameter h in our model represents coral
+mortality rate, encompassing the cumulative effects of diverse environmental stressors affecting reefs globally. These
+include rising sea temperatures that trigger coral bleaching
+events (significantly increasing h during thermal anomalies);
+ocean acidification that reduces calcification rates and weakens coral skeletons (gradually elevating h); pollution, sedimentation, and coastal development that impose direct physiological stress; and the increasing frequency and severity of
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+coral diseases worldwide that directly contribute to higher
+h values. These real-world stressors operate across different temporal scales, from acute (bleaching events) to chronic
+(acidification), which aligns with our analysis of how gradual versus rapid parameter shifts influence system dynamics
+and stability. The diagram features four distinct regions: a
+blue region where only the macroalgae state is stable, a gray
+bistable region where both macroalgae and coral states are
+stable, a purple region where only the coral state is stable,
+and a pink region without feasible stable states. These regions are delineated by bifurcation curves (black for transcritical points, blue for saddle node points). Figure S1 in the
+Supplement provides additional phase diagrams for different
+h values.
+Figure S2 demonstrates how time irreversibility metrics
+capture approaching bifurcations which are noise-induced
+transitions versus parameter grazing rate g driven in the
+coral–algal model for increasing h. Comparing the positions
+of maximum values and sharp rises in these indicators reveals
+a crucial temporal advantage of time irreversibility measures
+over critical slowing down indicators. Within the bistable region shown in Fig. S2, 1CCMmax (position of maximum
+1CCM) occurs significantly earlier than τrelaxMmax (position
+where τrelaxM sharply rises, defined as where kk > 1 × 104 )
+as gradual parameter changes. Similarly, 1CCCmax (position
+of maximum 1CCC) appears much earlier than τrelaxCmax
+(position where τrelaxC sharply rises). The τrelaxMmax line lies
+considerably closer to the right bifurcation boundary than the
+1CCMmax line, while the τrelaxCmax line lies much nearer to
+the left bifurcation boundary than the 1CCCmax line. These
+spatial relationships consistently demonstrate that time irreversibility measures (1CC) provide substantially earlier
+warning signals than relaxation time (τrelax ) indicators from
+CSD theory as the gradual parameter g changes with fluctuations, confirming their efficacy as early warning signals for
+critical transitions in coral–algae ecosystems.
+Figure 6a and d illustrate the average differences in crosscorrelations over time, represented as 1CCM and 1CCC,
+plotted against the grazing rate g. These values provide insight into the dynamics of the coral–algae system, revealing
+how the interaction strength between states varies as grazing pressure changes. Figure 6b and e display the relaxation
+times, τrelaxM and τrelaxC , in relation to the grazing rate g. The
+relaxation time quantifies how quickly the system responds
+to perturbations, serving as a crucial indicator of the stability
+of the macroalgae and coral states under varying conditions.
+Figure 6c and f present the variances VarM and VarC as functions of the grazing rate g. These variances reflect the degree
+of fluctuations within each state, highlighting how stability is
+affected as grazing pressure increases. It is noteworthy that,
+for Fig. 6, the fluctuation strength is set at D = 5.0 × 10−4 ,
+while, for panels (d)–(f), the fluctuation strength increases to
+D = 1.0 × 10−3 , with a fixed height parameter of h = 0.44.
+This variation in D is expected to have a significant impact
+on the observed relationships, further illustrating the delihttps://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+1517
+
+Figure 6. (a, d) The average difference in the cross-correlations forward and backward in time: 1CCM and 1CCC versus g. (b, e) The
+
+relaxation time τrelaxM and τrelaxC versus grazing rate g. (c, f) The variance VarM and VarC versus grazing rate g. (a–c) D = 5.0 × 10−4 .
+(d–f) D = 1.0 × 10−3 . (h = 0.44)
+
+cate balance between grazing intensity and the stability of
+the coral–algae ecosystem. We observe that, while increasing noise can also serve as an indicator for predicting state
+transitions, its predictive effectiveness diminishes relative to
+the performance observed at lower noise levels.
+Our landscape–flux framework offers substantial advantages over traditional CSD-based indicators, particularly in
+its ability to provide earlier detection of approaching transitions. While CSD focuses primarily on local stability properties near equilibrium states, our method captures global stability characteristics and non-equilibrium dynamics across
+the entire state space.
+Our study demonstrates that the landscape–flux approach
+and its derived early warning signals (cross-correlation function 1CC multidimensional data) can detect approaching
+transitions earlier than critical slowing down indicators based
+on theoretical relaxation time τrelax (one-dimensional data,
+measured through autocorrelation). This earlier detection capability is crucial for ecological management, as it potentially provides a longer window for intervention before critical transitions occur. This comparison is particularly meaningful because relaxation time represents the fundamental
+dynamical property underlying all CSD indicators, rather
+than just comparing with empirical manifestations of CSD
+(such as variance or autocorrelation methods). By demonstrating advantages at this fundamental level, we establish
+the theoretical superiority of our approach.
+Real-time ecological monitoring data from coral reef
+ecosystems present an unprecedented opportunity to bridge
+theoretical frameworks with empirical validation. By integrating time series data from reef monitoring stations (cap-
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+turing coral cover, algal abundance, and environmental parameters) into our landscape–flux methodology, we can operationalize the theoretical results outlined above. In particular,
+the cross-correlation functions of the coral reef ecosystem
+can be estimated directly from observed time series; hence
+we may calculate the average difference between forward
+and backward cross-correlation as an empirical EWS. Our
+framework thus provides practical early warning tools for
+policymakers and researchers, bridging the gap between abstract mathematical models and urgent conservation needs in
+threatened ecosystems.
+4
+
+Conclusions
+
+We explored the global dynamics of a coral–algal model under stochastic fluctuations using landscape–flux theory from
+non-equilibrium statistical physics. In this framework, system dynamics are governed by two fundamental components:
+potential landscapes that guide the system toward local minima and curl fluxes that drive transitions between alternative stable states. Quantifying global stability in complex
+ecological systems requires identifying an appropriate Lyapunov function, a challenging task that our approach addresses through the intrinsic-potential landscape φ0 , which
+serves as a Lyapunov function in the small noise limit and
+effectively quantifies the global stability of coral–algal dynamics.
+The presence of non-zero fluxes creates a notable deviation from classical equilibrium dynamics: dominant transition paths between alternative stable states do not follow simple steepest descent trajectories on the populationEarth Syst. Dynam., 16, 1503–1522, 2025
+
+1518
+
+potential landscape. Instead, transitions from macroalgae to
+coral states and vice versa follow irreversible paths determined by the interplay between the underlying populationpotential landscape and non-zero curl fluxes. This directional
+path asymmetry represents a fundamental characteristic of
+non-equilibrium systems.
+Within the bistable regime, the basin of attraction for the
+current state remains non-flat until reaching the right bifurcation point. Under sufficiently small noise conditions,
+this property enables prediction of impending state transitions before the system reaches critical points. Small fluctuations remain insufficient to trigger state switching until the
+right bifurcation point, where the current state’s basin flattens completely as the alternative basin becomes dominant.
+Consequently, time irreversibility measured through crosscorrelation differences between forward and backward trajectories provides an effective predictor for approaching bifurcations, even when the system remains within its current
+basin without transitioning.
+The analysis identifies several quantitative markers for
+system stability and dynamics: barrier heights between stable states, kinetic switching times (mean first passage time
+– MFPT), thermodynamic cost (entropy production rate –
+EPR), and dynamical driving force (average flux). We observed consistent trends across multiple metrics: average
+flux (Fluxav ), entropy production rate (EPR), intrinsic average flux (inFluxav ), and intrinsic entropy production rate
+(inEPR). The rotational nature of flux tends to destabilize
+point attractors, providing a dynamical mechanism underlying phase transitions in coral–algal ecosystems. Maintaining
+non-equilibrium flux requires energy dissipation, revealing
+the thermodynamic origin of bifurcations. Intrinsic free energy also serves as an effective early warning indicator, with
+all these metrics exhibiting significant changes and characteristic peaks between the two transcritical bifurcations:
+patterns that become even more pronounced in the zerofluctuation limit of intrinsic-potential landscapes.
+The non-equilibrium indicators, average flux (Fluxav ), entropy production rate (EPR), time irreversibility (1CC), and
+non-equilibrium free energy, all function as reliable predictors for critical transitions. Their turning points (peaks or
+troughs) consistently appear between the two transcritical bifurcations, enabling prediction of both bifurcations before
+the current state’s landscape flattens. These non-equilibrium
+warning signals precede the right bifurcation when starting from the macroalgae state with increasing grazing rate
+g and similarly anticipate the left bifurcation when starting
+from the coral state with decreasing g. This bidirectional predictive capacity provides substantially earlier warnings than
+conventional critical slowing down theory for both bifurcation types. While specific tipping point locations may vary
+across different models (Xu et al., 2021, 2023), we propose
+that non-equilibrium indicator turning points occurring between transcritical bifurcations represent a generic feature of
+systems with similar qualitative dynamics.
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+In the current model, we utilize uncorrelated white noise
+as a mathematical simplification that provides analytical
+tractability while still capturing the essential stochastic nature of state transitions. This approach allows us to derive
+expressions for potential landscapes and flux patterns. We
+recognize that environmental disturbances, such as temperature fluctuations, storm events, or nutrient pulses, would indeed affect coral, algae, and algal turfs in coordinated ways,
+introducing correlations in the noise structure of natural reef
+systems (Jouffray et al., 2015; Norström et al., 2009; Diko,
+2010; Gardner et al., 2003; Mcmanus and Polsenberg, 2004).
+It is worth noting that our potential landscape–flux framework remains theoretically appropriate for systems with correlated noise. The mathematical formalism can accommodate various noise structures, including anisotropic and correlated fluctuations. Due to space limitations in the present
+article and its complexity, we have focused on the uncorrelated case as a first approximation. The extension to correlated noise models, which would more accurately reflect
+synchronized environmental forcing experienced by different reef components, will be addressed in future research.
+Without conducting significant further analysis, it is challenging to accurately predict the precise effects of correlated
+noise on the overall system dynamics. The specific correlation patterns, timescales, and amplitudes of the noise would
+significantly influence the system’s response. The introduction of correlation structures in stochastic perturbations fundamentally alters the statistical properties of system trajectories, potentially creating emergent behaviors that cannot be
+intuited through qualitative reasoning alone. The precise correlation structure to be introduced would need to be motivated by data and may differ by reef location and climate,
+making this a nontrivial extension of the current work but
+undoubtedly a valuable and interesting one.
+The model tracks the evolution of proportions of space
+occupied by each functional type, effectively assuming that
+the system is spatially well mixed, leading to a spatially implicit modeling framework (Mumby et al., 2007). This approach is appropriate for intermediate spatial scales where
+mixing processes (such as larval dispersal, water circulation, and mobile herbivore grazing) tend to homogenize local variations. The spatially implicit framework allows us
+to focus on ecosystem-level dynamics without the computational complexity of spatially resolved models. Our potential and flux field landscape theoretical framework offers considerable versatility and could be naturally extended to spatially explicit models in future research. We recognize the
+importance of spatial heterogeneity in coral reef ecosystems,
+and, in subsequent work, we plan to develop spatially explicit extensions of this framework. In recent work, we have
+shown that the framework can be extended to spatially explicit models (of vegetation dynamics); hence it is a natural next step to leverage this progress to explore how the
+present results compare with EWSs in spatial extension of
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+
+1519
+
+the coral reef model studied here (Siu et al., 2025; Wu and
+Wang, 2013b, 2014, 2013a; Lepzelter and Wang, 2008).
+Despite the simplifying assumptions of the mathematical
+model, our current framework provides valuable insights into
+the global stability of coral reef ecosystems and demonstrates
+the utility of landscape–flux theory for understanding complex ecological dynamics. The simplifications employed here
+serve as a necessary first step toward more comprehensive
+models that can incorporate the full complexity of coral reef
+systems (Mcmanus et al., 2018; Nes et al., 2016).
+The ongoing degradation of coral reefs and deterioration
+of reef ecosystems remain among the most pressing conservation challenges of our time. By advancing theoretical understanding of coral–algae dynamics through our potential
+landscape–flux approach, this study contributes valuable insights that may guide practical conservation strategies for
+protecting and restoring these ecologically crucial yet increasingly threatened marine ecosystems.
+
+The potential landscape of equilibrium systems visually
+demonstrates the global stability structure of the system, with
+low-potential-energy regions corresponding to states where
+the system is more likely to reside, while the height of potential barriers reflects the difficulty of state transitions. This analytical approach has wide applications in the study of physical, chemical, and biological systems.
+
+Appendix A: Potential landscape and local stability
+analysis of equilibrium systems
+
+Author contributions. SAL and JW designed the conceptualiza-
+
+In equilibrium systems, the potential function or landscape
+is an essential tool for describing the stability of system
+states. For such systems, dynamics are completely determined by the potential landscape, with the system always
+evolving along the direction of decreasing potential energy
+until reaching a potential energy minimum. A key characteristic of equilibrium systems is the absence of non-zero probability flux, meaning the system satisfies detailed balance conditions, with zero net flow along any closed path being zero
+(Wang, 2015; Ge and Qian, 2010; Qian, 2006; Nicolis and
+Prigogine, 1977; Van Kampen, 2007; M., 1992).
+Mathematically, the dynamic equation of an equilibrium
+system can be represented as a gradient system: dx/dt =
+−∇U (x), where U (x) is the potential function landscape.
+The system’s steady states correspond to extremal points of
+the potential function, with minima representing stable equilibrium points and maxima representing unstable equilibrium
+points.
+Local stability analysis is a method for studying the behavior of small perturbations near equilibrium points. By linearizing the dynamic equations around an equilibrium point,
+one obtains the Jacobian matrix characterizing the fluctuations. For equilibrium systems, this matrix is symmetric, and
+its eigenvalues completely determine the stability of the equilibrium point (Nicolis and Prigogine, 1977; Van Kampen,
+2007; M., 1992):
+– all negative eigenvalues: stable node;
+
+Data availability. All
+
+study data are included in this
+article and/or the Supplement, as well as GitHub:
+https://doi.org/10.5281/zenodo.17059097 (xuliciac, 2025). Any
+additional information required is available from the corresponding
+authors upon request.
+
+Supplement. The supplement related to this article is available
+
+online at https://doi.org/10.5194/esd-16-1503-2025-supplement.
+
+tion, and LX and DP carried it out. LX, DP, SAL, and JW developed
+the model code and performed the simulations. LX, DP, SAL, and
+JW prepared the article.
+
+Competing interests. The authors declare that they have no con-
+
+flict of interest.
+
+Disclaimer. Publisher’s note: Copernicus Publications remains
+
+neutral with regard to jurisdictional claims made in the text, published maps, institutional affiliations, or any other geographical representation in this paper. While Copernicus Publications makes every effort to include appropriate place names, the final responsibility
+lies with the authors.
+
+Special issue statement. This article is part of the special issue
+
+“Earth resilience in the Anthropocene”. It is not associated with a
+conference.
+
+Financial support. Li Xu has been supported by the Natural
+
+Science Foundation of Jilin Province (grant no. 20220101013JC)
+and the National Natural Science Foundation of China (grant no.
+12234019). Simon Asher Levin and Denis D. Patterson have been
+supported by the NSF (grant no. DMS-1951358) and a gift from
+William H. Miller III.
+
+Review statement. This paper was edited by Nico Wunderling
+
+and reviewed by Anna van der Kaaden and Juan Rocha.
+
+– presence of positive eigenvalues: unstable equilibrium
+point;
+– presence of zero eigenvalues: potential bifurcation.
+https://doi.org/10.5194/esd-16-1503-2025
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1520
+References
+
+Abbott, K. C. and Dakos, V.: Mapping the distinct origins of bimodality in a classic model with alternative stable states, Theor.
+Ecol., 14, 673–684, 2021.
+Andersen, T., Carstensen, J., Hernández-García, E., and
+Duarte, C. M.: Ecological thresholds and regime shifts: approaches to identification, Trends Ecol. Evol., 24, 49–57,
+https://doi.org/10.1016/j.tree.2008.07.014, 2009.
+Arani, B. M. S., Carpenter, S. R., Lahti, L., van Nes, E., and Scheffer, M.: Exit time as a measure of ecological resilience, Science,
+372, 1168, https://doi.org/10.1126/science.aay4895, 2021.
+Berglund, N. and Gentz, B.: Noise-induced phenomena in slowfast dynamical systems: a sample-paths approach, Springer,
+https://doi.org/10.1007/1-84628-186-5, 2006.
+Bestelmeyer, B. T., Duniway, M. C., James, D. K., Burkett, L. M.,
+and Havstad, K. M.: A test of critical thresholds and their indicators in a desertification-prone ecosystem, Ecology, 94, 302–312,
+2013.
+Biggs, R., Carpenter, S. R., and Brock, W. A.: Turning back
+from the brink: detecting an impending regime shift in
+time to avert it, P. Natl. Acad. Sci. USA, 106, 826–831,
+https://doi.org/10.1073/pnas.0811729106, 2009.
+Boerlijst, M. C., Oudman, T., and de Roos, A. M.: Catastrophic collapse can occur without early warning: examples of silent catastrophes in structured ecological models, PloS One, 8, e62033,
+https://doi.org/10.1371/journal.pone.0062033, 2013.
+Boettiger, C. and Hastings, A.: Quantifying limits to detection of
+early warning for critical transitions, J. R. Soc. Interface, 9,
+2527–2539, https://doi.org/10.1098/rsif.2012.0125, 2012.
+Boettiger, C. and Hastings, A.: From patterns to predictions, Nature,
+493, 157–158, 2013a.
+Boettiger, C. and Hastings, A.: Tipping points: From
+patterns
+to
+predictions,
+Nature,
+493,
+157–158,
+https://doi.org/10.1038/493157a, 2013b.
+Boettiger, C., N., R., and Hastings, A.: Early warning signals:
+the charted and uncharted territories, Theor. Ecol., 6, 255–264,
+2013a.
+Boettiger, C., Ross, N., and Hastings, A.: Early warning signals and the prosecutor’s fallacy, P. R. Soc. B, 280, 20131372,
+https://doi.org/10.1098/rspb.2013.1372, 2013b.
+Boulton, C. A. and Lenton, T. M.: A new method for detecting abrupt shifts in time series, F1000Research, 8, 746,
+https://doi.org/10.12688/f1000research.19310.1, 2019.
+Burthe, S. J., Henrys, P. A., Mackay, E. B., Spears, B. M., Campbell, R., Carvalho, L., Dudley, B., Gunn, I. D. M., Johns, D. G.,
+Maberly, S. C., May, L., Newell, M. A., Wanless, S., Winfield,
+I. J., Thackeray, S. J., and Daunt, F.: Do early warning indicators
+consistently predict nonlinear change in long-term ecological
+data?, J. Appl. Ecol., 53, 666–676, https://doi.org/10.1111/13652664.12519, 2016.
+Bury, T. M., Sujith, R. I., Pavithran, I., Scheffer, M., Lenton, T. M.,
+Anand, M., and Bauch, C. T.: Deep learning for early warning signals of tipping points, P. Natl. Acad. Sci. USA, 118,
+e2106140118, https://doi.org/10.1073/pnas.2106140118, 2021a.
+Bury, T. M., Sujith, R. I., Pavithran, I., Scheffer, M., Lenton, T. M.,
+Anand, M., and Bauch, C. T.: Deep learning for early warning signals of tipping points, P. Natl. Acad. Sci. USA, 118,
+e2106140118, https://doi.org/10.1073/pnas.2106140118, 2021b.
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+Carstensen, J., Sánchez-Camacho, M., Duarte, C. M.,
+Krause-Jensen, D., and Marbà, N.: Connecting the dots:
+responses of coastal ecosystems to changing nutrient
+concentrations, Environ. Sci. Technol., 47, 1188–1194,
+https://doi.org/10.1021/es303804g, 2013.
+Clements, C. F. and Ozgul, A.: Indicators of transitions in biological systems, Ecol. Lett., 21, 905–919,
+https://doi.org/10.1111/ele.12948, 2018a.
+Clements, C. F. and Ozgul, A.: Indicators of transitions in biological
+systems, Ecol. Lett., 21, 905–919, 2018b.
+Contamin, R. and Ellison, A. M.: Indicators of regime shifts in ecological systems: what do we need to know and when do we need
+to know it?, Ecol. Appl., 19, 799–816, 2009.
+Dai, L., Vorselen, D., Korolev, K. S., and Gore, J.: Generic
+indicators for loss of resilience before a tipping point
+leading to population collapse, Science, 336, 1175–1177,
+https://doi.org/10.1126/science.1219805, 2012.
+Dai, L., Korolev, K. S., and Gore, J.: Slower recovery in space before collapse of connected populations, Nature, 496, 355–358,
+https://doi.org/10.1038/nature12071, 2013.
+Dakos, V., Carpenter, S. R., Brock, W. A., Ellison, A. M., Guttal, V., Ives, A. R., Kéfi, S., Livina, V., Seekell, D. A.,
+van Nes, E. H., and Scheffer, M.: Methods for detecting
+early warnings of critical transitions in time series illustrated using simulated ecological data, PloS One, 7, e41010,
+https://doi.org/10.1371/journal.pone.0041010, 2012.
+Dakos, V., Carpenter, S. R., van Nes, E. H., and Scheffer, M.:
+Resilience indicators: prospects and limitations for early warnings of regime shifts, Philos. T. R. Soc. B, 370, 20130263,
+https://doi.org/10.1098/rstb.2013.0263, 2015.
+Diko, A.: Ecological Processes and Contemporary Coral Reef Management, Diversity, 2, 717–737, 2010.
+Ditlevsen, P. D. and Johnsen, S. J.: Tipping points: early warning and wishful thinking, Geophys. Res. Lett., 37, L19703,
+https://doi.org/10.1029/2010GL044486, 2010.
+Drake, J. M. and Griffen, B. D.: Early warning signals of extinction in deteriorating environments, Nature, 467, 456–459,
+https://doi.org/10.1038/nature09389, 2010.
+Dudgeon, S. R., Aronson, R. B., Bruno, J. F., and Precht, W. F.:
+Phase shifts and stable states on coral reefs, Mar. Ecol. Prog.
+Ser., 413, 201–216, 2010.
+Fang, X., Kruse, K., Lu, T., and Wang, J.: Nonequilibrium physics in biology, Rev. Mod. Phys., 91, 045004,
+https://doi.org/10.1103/RevModPhys.91.045004, 2019.
+Gardner, T., Cote, I., Gill, J., Grant, A., and Watkinson, A. R.: LongTerm Region-Wide Declines in Caribbean Corals, Science, 301,
+958–960, 2003.
+Ge, H. and Qian, H.: The physical origins of entropy
+production, free energy dissipation and their mathematical representations, Phys. Rev. E, 81, 051133,
+https://doi.org/10.1103/PhysRevE.81.051133, 2010.
+George, S. V., Kachhara, S., and Ambika, G.: Early warning signals for critical transitions in complex systems, Phys. Scripta,
+98, 072002, https://doi.org/10.1088/1402-4896/acde20, 2023.
+Gillespie, D.: Exact stochastic simulation of coupled chemical reactions, J. Phys. Chem., 81, 2340–2361, 1977.
+Grassia, M., De Domenico, M., and Mangioni, G.: Machine
+learning dismantling and early-warning signals of disin-
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+L. Xu et al.: Global stability and tipping point prediction
+tegration in complex systems, Nat. Commun., 12, 5190,
+https://doi.org/10.1038/s41467-021-25485-8, 2021.
+Gsell, A. S., Scharfenberger, U., Özkundakci, D., Walters, A., Hansson, L., Janssen, A. B. G., Nõges, P., Reid, P. C., Schindler,
+D. E., Van Donk, E., Dakos, V., and Adrian, R.: Evaluating early-warning indicators of critical transitions in natural
+aquatic ecosystems, P. Natl. Acad. Sci. USA, 113, E8089–E8095,
+https://doi.org/10.1073/pnas.1608242113, 2016.
+Guttal, V. and Jayaprakash, C.: Spatial variance and spatial skewness: leading indicators of regime shifts in spatial ecological systems, Theor. Ecol., 2, 3–12, https://doi.org/10.1007/s12080-0080033-1, 2009.
+Guttal, V., Jayaprakash, C., and Tabbaa, O. P.: Robustness of early
+warning signals of regime shifts in time-delayed ecological models, Theor. Ecol., 6, 271–283, https://doi.org/10.1007/s12080013-0192-6, 2013.
+Hastings, A. and Wysham, D. B.: Regime shifts in ecological
+systems can occur with no warning, Ecol. Lett., 13, 464–472,
+https://doi.org/10.1111/j.1461-0248.2010.01439.x, 2010.
+Hastings, A., Karen C., A., Cuddington, K., Francis, T., Gellner, G.,
+Lai, Y., Morozov, A., Petrovskii, S., Scranton, K., and Zeeman,
+M.: Transient phenomena in ecology, Science, 361, eaat6412,
+https://doi.org/10.1126/science.aat6412, 2018.
+Hughes, T. P., Rodrigues, M. J., Bellwood, D. R., Ceccarelli, D.,
+Hoegh-Guldberg, O., Mccook, L., Moltschaniwskyj, N., Pratchett, M. S., Steneck, R. S., and Willis, B.: Phase Shifts, Herbivory,
+and the Resilience of Coral Reefs to Climate Change, Curr. Biol.,
+17, 360–365, 2007.
+Jouffray, J.-B., Nyström, M., Norström, A. V., Williams, I. D.,
+Wedding, L. M., Kittinger, J. N., and Williams, G. J.: Identifying multiple coral reef regimes and their drivers across the
+Hawaiian archipelago, Philos. T. R. Soc. B, 370, 20130268,
+https://doi.org/10.1098/rstb.2013.0268, 2015.
+Kéfi, S., Guttal, V., Brock, W. A., Carpenter, S. R., Ellison,
+A. M., Livina, V. N., Seekell, D. A., Scheffer, M., van Nes,
+E. H., and Dakos, V.: Early warning signals of ecological transitions: methods for spatial patterns, PloS One, 9, e92097,
+https://doi.org/10.1371/journal.pone.0092097, 2014.
+Lamothe, K. A., Somers, K. M., and Jackson, D. A.: Linking
+the ball-and-cup analogy and ordination trajectories to describe
+ecosystem stability, resistance, and resilience, Ecosphere, 10,
+e02629, https://doi.org/10.1002/ecs2.2629, 2019.
+Lassetter, A., Cotilla-Sanchez, E., and Kim, J.: Using critical slowing down features to enhance performance of
+artificial neural networks for time-domain power system data, in: 2021 IEEE IX International Conference on
+Smart Energy Grid Engineering (SEGE), 117–123, IEEE,
+https://doi.org/10.1109/SEGE52446.2021.9535027, 2021.
+Lenton, T. M.: Early warning of climate tipping points, Nat. Clim.
+Change, 1, 201–209, https://doi.org/10.1038/nclimate1143,
+2011.
+Lepzelter, D. and Wang, J.: Exact probabilistic solution of spatialdependent stochastics and associated spatial potential landscape for the bicoid protein, Phys. Rev. E, 77, 041917,
+https://doi.org/10.1103/PhysRevE.77.041917, 2008.
+Li, X., Wang, H., Zhang, Z., and Hastings, A.: Mathematical analysis of coral reef models, J. Math. Anal. Appl., 416, 352–373,
+2014.
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+1521
+Lindegren, M., Dakos, V., Gröger, J. P., Gårdmark, A., Kornilovs, G., Otto, S. A., and Möllmann, C.: Early detection of ecosystem regime shifts: a multiple method evaluation for management application, PloS One, 7, e38410,
+https://doi.org/10.1371/journal.pone.0038410, 2012.
+Ma, J., Tang, J., Yan, Z., Jiang, F., Zeng, H., and Fang, C.:
+Data-driven power system collapse predicting using critical
+slowing down indicators, in: 2018 International Conference on
+Power System Technology (POWERCON), 1879–1884, IEEE,
+https://doi.org/10.1109/POWERCON.2018.8602265, 2018.
+Mccook, L. J., Jompa, J., and Diaz-Pulido, G.: McCook L, Jompa J,
+Diaz-Pulido G.. Competition between corals and algae on coral
+reefs: a review of evidence and mechanisms, Coral Reef, 19,
+400–417, 2001.
+Mcmanus, J. W. and Polsenberg, J. F.: Coral-algal phase shifts
+on coral reefs: ecological and environmental aspects, Prog.
+Oceanogr., 60, 263–279, 2004.
+Mcmanus, L. C., Watson, J. R., V., V. V., and Levin, S. A.: Stability
+and recovery of coral-algae systems: the importance of recruitment seasonality and grazing influence, Theor. Ecol., 12, 61–72,
+2018.
+Mumby, P. J., Hastings, A., and Edwards, H. J.: Thresholds and the
+resilience of Caribbean coral reefs, Nature, 450, 98–101, 2007.
+Nes, V., Egbert, H., Leemput, V. D., Ingrid, A., Hughes, Terry, P.,
+and Scheffer, M.: Multiple feedbacks and the prevalence of alternate stable states on coral reefs, Coral Reefs, 35, 857–865, 2016.
+Nicolis, G. and Prigogine, I.: Self-organization in nonequilibrium
+systems, Wiley, New York, ISBN 0471024015, 1977.
+Nolting, B. C. and Abbott, K. C.: Balls, cups, and quasi-potentials:
+quantifying stability in stochastic systems, Ecology, 97, 850–
+864, 2016.
+Norström, A. V., Nyström, M., Lokrantz, J., and Folke,
+C.: Alternative states on coral reefs: beyond coral–
+macroalgal phase shifts, Mar. Ecol. Prog. Ser., 376, 295–306,
+https://doi.org/10.3354/meps07815, 2009.
+Pandolfi, J. M., Bradbury, R. H., Sala, E., Hughes, T. P., Karen, A.,
+Cooke, R. G., Mcardle, D., Mcclenachan, L., Newman, M. J. H.,
+and Paredes, G.: Global Trajectories of the Long-Term Decline
+of Coral Reef Ecosystems, Science, 301, 955–958, 2003.
+Perretti, C. T. and Munch, S. B.: Regime shift indicators fail under noise levels commonly observed in ecological systems, Ecol.
+Appl., 22, 1772–1779, https://doi.org/10.1890/11-0161.1, 2012.
+Qian, H.: Open-system nonequilibrium steady-state: Statistical thermodynamics, fluctuations and chemical oscillations, J. Phys.
+Chem. B, 110, 15063–15074, 2006.
+Qian, H.: Entropy demystified: The “thermo”-dynamics of stochastically fluctuating systems, Method Enzymol., 467, 111–134,
+2009.
+Qian, H. and Elson, E.: Fluorescence correlation spectroscopy with
+high-order and dual-color correlation to probe nonequilibrium
+steady state, P. Natl. Acad. Sci. USA, 101, 2828–2833, 2004.
+Scheffer, M.: Critical Transitions in Nature and Society, Princeton
+University Press, Princeton, ISBN 9780691122045, 2009.
+Scheffer, M., Hosper, S., Meijer, M.-L., Moss, B., and Jeppesen,
+E.: Alternative equilibria in shallow lakes, Trends Ecol. Evol., 8,
+275–279, 1993.
+Scheffer, M., Carpenter, S., Foley, J. A., Folke, C., and Walker, B.:
+Catastrophic shifts in ecosystems, Nature, 413, 591–596, 2001.
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+1522
+Scheffer, M., Bascompte, J., Brock, W. A., Brovkin, V., Carpenter,
+S. R., Dakos, V., Held, H., Nes, E., Rietkerk, M., and Sugihara,
+G.: Early-Warning Signals for Critical Transitions, Nature, 461,
+53–9, 2009.
+Scheffer, M., Carpenter, S. R., Lenton, T. M., Bascompte, J.,
+Brock, W., Dakos, V., Koppel, J., Leemput, I., Levin, S. A.,
+and Nes, E.: Anticipating Critical Transitions, Science, 338, 344,
+https://doi.org/10.1126/science.1225244, 2012.
+Scheffer, M., Barrett, S., Carpenter, S. R., Folke, C., Green, A. J.,
+Holmgren, M., Hughes, T. P., Kosten, S., van de Leemput, I. A.,
+Nepstad, D. C., van Nes, E. H., Peeters, E. T. H. M., and Walker,
+B.: Creating a safe operating space for iconic ecosystems, Science, 347, 1317–1319, https://doi.org/10.1126/science.aaa3769,
+2015.
+Siu, J., Wu, W., Patterson, D. D., Levin, S. A., and Wang, J.: Revealing physical mechanisms of pattern formation and switching in ecosystems via landscape and flux, Advanced Science,
+https://doi.org/10.1002/advs.202501776, 2025.
+Swain, P., Elowitz, M., and Siggia, E.: Intrinsic and extrinsic contributions to stochasticity in gene expression, P. Natl. Acad. Sci.
+USA, 99, 12795–12800, 2002.
+Thompson, J. M. T. and Sieber, J.: Predicting climate tipping as a
+noisy bifurcation: a review, Int. J. Bifurcat. Chaos, 21, 399–423,
+https://doi.org/10.1142/S0218127411028519, 2011.
+Van Kampen, N.: Stochastic processes in physics and chemistry, Elsevier, Amsterdam, ISBN 9780444529657, e-ISBN
+9780080475363, 2007.
+Veraart, A. J., Faassen, E. J., Dakos, V., Nes, E., Liirling, M., and
+Scheffer, M.: Recovery rates reflect distance to a tipping point in
+a living system, Nature, 481, 357–359, 2012.
+Wang, J.: Landscape and flux theory of non-equilibrium dynamical
+systems with application to biology, Advances in Physics, 64, 1–
+137, 2015.
+Wang, J., Xu, L., and Wang, E. K.: Potential landscape and flux
+framework of nonequilibrium networks: Robustness, dissipation,
+and coherence of biochemical oscillations, P. Natl. Acad. Sci.
+USA, 105, 12271–12276, 2008.
+Wang, J., Xu, L., and Wang, E. K.: The potential landscape of genetic circuits imposes the arrow of time in stem cell differentiation, Biophys. J., 99, 29–39, 2010.
+Wang, J., Zhang, K., Xu, L., and Wang, E.: Quantifying the
+Waddington landscape and biological paths for development and
+differentiation, P. Natl. Acad. Sci. USA, 108, 8257–8262, 2011.
+Weinans, E., Lever, J. J., Bathiany, S., Quax, R., Bascompte,
+J., van Nes, E. H., Scheffer, M., and van de Leemput,
+I. A.: Finding the direction of lowest resilience in multivariate complex systems, J. R. Soc. Interface, 16, 20190629,
+https://doi.org/10.1098/rsif.2019.0629, 2019.
+Wu, W. and Wang, J.: Landscape Framework and Global Stability for Stochastic Reaction Diffusion and General Spatially Extended Systems with Intrinsic Fluctuations, J. Phys. Chem. B,
+117, 12908–12934, 2013a.
+
+Earth Syst. Dynam., 16, 1503–1522, 2025
+
+L. Xu et al.: Global stability and tipping point prediction
+Wu, W. and Wang, J.: Potential and flux field landscape theory. I. Global stability and dynamics of spatially dependent non-equilibrium systems, J. Chem. Phys., 139, 121920,
+https://doi.org/10.1063/1.4816378, 2013b.
+Wu, W. and Wang, J.: Potential and Flux Field Landscape Theory. II. Non-Equilibrium Thermodynamics of Spatially Inhomogeneous Stochastic Dynamical Systems, J. Chem. Phys., 141,
+105104, https://doi.org/10.1063/1.4894411, 2014.
+Xu, L. and Wang, J.: Curl Flux as a Dynamical Origin of the Bifurcations/Phase Transitions of Nonequilibrium Systems: Cell Fate
+Decision Making, J. Phys. Chem. B, 124, 2549–2559, 2020.
+Xu, L., Shi, H., Feng, H., and Wang, J.: The energy pump
+and the origin of the non-equilibrium flux of the dynamical systems and the networks, J. Chem. Phys., 136, 165102,
+https://doi.org/10.1063/1.3703514, 2012.
+Xu, L., Zhang, F., Zhang, K., Wang, E. K., and Wang, J.: The Potential and Flux Landscape Theory of Ecology, PLoS ONE, 9,
+e86746, https://doi.org/10.1371/journal.pone.0086746, 2014a.
+Xu, L., Zhang, K., and Wang, J.: Exploring the mechanisms of differentiation, dedifferentiation, reprogramming and transdifferentiation, PLoS ONE, 9, e105216,
+https://doi.org/10.1371/journal.pone.0105216, 2014b.
+Xu, L., Patterson, D., Staver, A., Levin, S., and Wang, J.: Unifying deterministic and stochastic ecological dynamics via
+a landscape-flux approach, P. Natl. Acad. Sci. USA, 118,
+e2103779118, https://doi.org/10.1073/pnas.2103779118, 2021.
+Xu, L., Patterson, D., Levin, S., and Wang, J.: Non-equilibrium
+early-warning signals for critical transitions in ecological systems, P. Natl. Acad. Sci. USA, 120, e2218663120,
+https://doi.org/10.1073/pnas.2218663120, 2023.
+xuliciac:
+xuliciac/coralreef_ESD_data-code:
+coralreef_ESD_data-code,
+Zenodo
+[data
+set],
+https://doi.org/10.5281/zenodo.17059097, 2025.
+Yeomans J. M.: Statistical Mechanics of Phase Transitions, Oxford
+University Press, ISBN 0198517300, ISBN 0198517297, 1992.
+Zhang, F., Xu, L., Zhang, K., Wang, E., and Wang, J.: The potential and flux landscape theory of evolution, J. Chem. Phys., 137,
+065102, https://doi.org/10.1063/1.4734305, 2012.
+Zhang, K. and Wang, J.: Exploring the Underlying Mechanisms of
+the Xenopus laevis Embryonic Cell Cycle, J. Phys. Chem. B,
+122, 5487–5499, 2018.
+
+https://doi.org/10.5194/esd-16-1503-2025
+
+
